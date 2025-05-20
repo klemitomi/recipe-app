@@ -23,9 +23,11 @@ import { MatListModule } from '@angular/material/list';
 })
 export class LayoutComponent {
   currentYear: any;
+  userId: any;
 logout() {
 throw new Error('Method not implemented.');
 }
+
 switchMenuSize() {
 throw new Error('Method not implemented.');
 }
