@@ -1,9 +1,10 @@
 <mat-sidenav-container class="layout-container">
-    <mat-sidenav *sidenav mode="side" opened="isSidenavOpen">
+    <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen">
         <mat-toolbar>Menü</mat-toolbar>
         <mat-nav-list>
-            <a mat-list-item routerLink="recipes" routerLinkActive="active">Receptek</a>
-            <a mat-list-item routerLink="recipes/add" routerLinkActive="active">Uj recept</a>
+            <a mat-list-item routerLink="recipies" routerLinkActive="active">Receptek</a>
+            <a mat-list-item routerLink="recipie/add" routerLinkActive="active">Új recept hozzáadása</a>
+            <a mat-list-item routerLink="recipies/my" routerLinkActive="active">Saját receptek</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
