@@ -42,7 +42,7 @@ export class LoginComponent {
         const { email, password } = this.loginForm.value;
         const userCredential: UserCredential = await this.authenticationService.login(email, password);
         this.authenticationService.setUser(userCredential);
-        this.router.navigate(['recipes'])
+        this.router.navigate(['/recipes']);
       } catch (error) {
         console.log(error);
       }

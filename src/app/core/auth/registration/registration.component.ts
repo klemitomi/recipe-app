@@ -27,7 +27,11 @@ export class RegistrationComponent {
 
   registerForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private authenticationService: AuthenticationService) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private authenticationService: AuthenticationService,
+    private router: Router
+  ) {
     this.registerForm = this.formBuilder.group({
     email: ['', Validators.required],
     password: ['', Validators.required],
@@ -39,7 +43,7 @@ export class RegistrationComponent {
     try {
       const { email, password } = this.registerForm.value;
       const UserCredential: UserCredential = await this.authenticationService.signup(email, password);
-      console.log('User registered successfully:', UserCredential);
+      this.router.navigate(['/login']);
     } catch (error) {
     console.error('Error during registration:', error);
   }
