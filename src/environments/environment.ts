@@ -4,6 +4,7 @@ export const environment = {
     firebaseConfig: {
     apiKey: "AIzaSyAqDYqgsge2kyTZBF9NBteWS__wR9WpqsM",
     authDomain: "recipe-app-enyim.firebaseapp.com",
+    databaseURL: "https://recipe-app-enyim-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "recipe-app-enyim",
     storageBucket: "recipe-app-enyim.firebasestorage.app",
     messagingSenderId: "1034528960575",
